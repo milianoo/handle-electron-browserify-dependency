@@ -1,10 +1,10 @@
 var dependency;
-var environment = 'b';
+var environment = 'browser';
 
-if (environment === 'b'){
+if (environment === 'node'){
     dependency = require("./modules/b");
 }
-if (environment === 'a'){
+if (environment === 'browser'){
     dependency = require("./modules/a");
 }
 

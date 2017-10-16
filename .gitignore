@@ -1,6 +1,9 @@
 # IntelliJ files
 .idea
 browserify_dependency.iml
+app.bundle.js
+browser.bundle.js
+main.bundle.js
 
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
