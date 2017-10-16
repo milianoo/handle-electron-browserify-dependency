@@ -1,0 +1,25 @@
+{
+  "name": "handle-electron-browserify-dependency",
+  "version": "1.0.0",
+  "description": "How to handle different dependencies using browserify to build app for electron (node) and browser app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "bundle_main": "browserify --ignore-missing --no-builtins --no-commondir --insert-global-vars=\"global\" --no-browser-field main.js > main.bundle.js",
+    "bundle_render": "browserify -x node_modules/electron/**/*.js --node app.js -o app.bundle.js",
+    "bundle_browser": "browserify -u ./modules/b -e app.js -o browser.bundle.js"
+  },
+  "repository": "git@github.com:milianoo/handle-electron-browserify-dependency.git",
+  "keywords": [
+    "browserify",
+    "di",
+    "dependecy",
+    "injection"
+  ],
+  "author": "Milad Rezazadeh <milad.rk@live.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0"
+  }
+}
